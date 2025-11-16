@@ -22,7 +22,7 @@ public class Main {
             switch (opcion) {
                 case 1 -> servicio.agregarLibro(sc);
                 case 2 -> servicio.listarLibros();
-                case 3 -> System.out.println("Saliendo....");
+                case 3 -> System.out.println("Saliendo... ");
                 default -> System.out.println("Opción inválida\n");
             }
 
