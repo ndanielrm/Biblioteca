@@ -9,7 +9,7 @@ El objetivo es desarrollar un programa en **Java (modo consola)** que modele la 
 
 El sistema permite administrar libros y usuarios de una biblioteca, pudiendo realizar las siguientes operaciones:
 
-- Agregar nuevos libros 📖  
+- Agregar nuevos libros   
 - Listar todos los libros disponibles  
 - Buscar libros por título
 - Eliminar o modificar libros  
@@ -47,3 +47,9 @@ Biblioteca/
 | Cosa2                         | A elegir                 | rama-x       |
 
 ---
+---
+## **Cosas a Agregar o Faltantes**
+
++La idea sería que en "Data" haya unos libros cargados así podemos visualizar ya una lista pre cargada con stock y poder aumentar o disminuir ese stock.
+
++Agregar exepciones en caso de cualquier error.
