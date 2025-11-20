@@ -1,6 +1,8 @@
 import servicios.BibliotecaService;
 import java.util.Scanner;
-
+/*Acá solamente tenemos el "Main", si queremos crear nuevas funciones, eliminar otras 
+ * o modificar algo, debemos informar sobre los cambios por si otro está trabajando en lo mismo.
+ */
 public class Main {
 
     public static void main(String[] args) {

@@ -1,5 +1,17 @@
 package modelos;
-
+/**
+ * Clase que representa un libro dentro del sistema de biblioteca.
+ * Contiene información básica como código, título, autor y stock disponible.
+ * 
+ * Esta clase proporciona:
+ * - Atributos para almacenar los datos del libro.
+ * - Un constructor para inicializar dichos valores.
+ * - Métodos getters y setters para acceder y modificar la información.
+ * - Un método toString() para mostrar el libro en un formato legible.
+ * 
+ * Su propósito es servir como modelo principal para manejar los libros
+ * registrados dentro del sistema.
+ */
 public class libro {
     
     //Atributos

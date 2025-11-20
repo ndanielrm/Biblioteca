@@ -43,7 +43,7 @@ Biblioteca/
 | Nombre completo               | Rol / Función principal  | Rama en Git |
 |-------------------------------|--------------------------|--------------|
 | Nicolás Daniel Roman Moreno   | A elegir                 | rama-nicolas |
-| Tal1                          | A elegir                 | rama-X       |
-| Tal2                          | A elegir                 | rama-x       |
+| Matias Chazarreta             | A elegir                 | rama-matias  |
+| Cosa2                         | A elegir                 | rama-x       |
 
 ---
