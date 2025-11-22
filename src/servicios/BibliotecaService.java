@@ -26,6 +26,8 @@ public class BibliotecaService {
 
     private ArrayList<libro> libros = new ArrayList<>();  //Lista para almacenar libros
 
+    private ArrayList<libro> librosPrestados = new ArrayList<>(); //lista para guardar los libros prestados
+
     public void agregarLibro(Scanner sc) {
         int codigo;
         libro libroExistente;
@@ -111,6 +113,61 @@ public class BibliotecaService {
 
         System.out.println("\n===== LISTADO DE LIBROS =====");
         libros.forEach(System.out::println);
+        System.out.println();
+    }
+    
+    //MÉTODO PRESTAR LIBRO
+    public void prestarLibro(Scanner sc) {
+
+        System.out.print ("Código del libro a prestar: ");
+        int codigo = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 0; i < libros.size(); i++) {
+    libro l = libros.get(i);
+
+    if (l.getCodigo() == codigo) {
+
+        if (l.getStock() > 0) {
+
+            // Reducimos el stock
+            l.setStock(l.getStock() - 1);
+
+            // Agregamos a lista de prestados
+            librosPrestados.add(l);
+
+            System.out.println("Libro prestado: " + l.getTitulo());
+
+            // Si stock llega a 0, removemos SIN generar errores
+            if (l.getStock() == 0) {
+                System.out.println("El stock llegó a 0, el libro será retirado del inventario.");
+                libros.remove(i); // ← AHORA ES SEGURO
+            }
+
+            return;
+        } else {
+            System.out.println("No hay stock disponible.");
+            return;
+        }
+    }
+}
+System.out.println("No existe un libro con ese código.\n");
+
+}
+
+
+    //MÉTODO LISTAR LIBROS PRESTADOS
+    public void listarPrestados() {
+
+        if (librosPrestados.isEmpty()) {
+            System.out.println("No hay libros prestados actualmente.\n");
+            return;
+        }
+
+        System.out.println("\n===== LIBROS PRESTADOS =====");
+        for (libro l : librosPrestados) {
+            System.out.println(l);
+        }
         System.out.println();
     }
 }
