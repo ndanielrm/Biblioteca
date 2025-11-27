@@ -12,17 +12,16 @@ package modelos;
  * Su propósito es servir como modelo principal para manejar los libros
  * registrados dentro del sistema.
  */
-public class libro {
+    public class libro extends MaterialBiblioteca implements Identificable { //trata distintos objetos como identificables, aunque sean de clases diferentes.
     
     //Atributos
-    private int codigo, stock;
-    private String titulo, autor;
+    private int stock;
+    private String autor;
 
     //Constructor
     public libro(int codigo, int stock, String titulo, String autor){
-        this.codigo = codigo;
+        super(codigo, titulo);
         this.stock = stock;
-        this.titulo = titulo;
         this.autor = autor;
     }
 
@@ -57,6 +56,11 @@ public class libro {
 
     public void setAutor(String autor){
         this.autor = autor;
+    }
+
+    @Override
+    public int getIdentificador() {
+        return codigo;
     }
 
     @Override
